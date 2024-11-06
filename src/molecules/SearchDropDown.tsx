@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 
 type Props = {
   open: boolean;
@@ -7,7 +6,7 @@ type Props = {
 };
 
 
-export default function SearchDropDown({open, toggle}:Props) {
+export default function SearchDropDown({open}:Props) {
     return (
       <div
         className={`${
