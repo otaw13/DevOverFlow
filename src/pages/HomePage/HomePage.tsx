@@ -28,7 +28,7 @@ export default function HomePage(props: Props) {
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event:MouseEvent) => {
       if (!event.target.closest(".theme-dropdown") && isThemeOpen) {
         setIsThemeOpen(false);
       }

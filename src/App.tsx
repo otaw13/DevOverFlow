@@ -28,9 +28,8 @@ export default function App() {
 
   return (
     <div>
-      <HomePage imgSource={Pfp} open={false} toggle={function (): void {
-        throw new Error("Function not implemented.");
-      } }/>
+      <HomePage imgSource={Pfp} 
+      />
       {/* <SearchbarComponent className="bg-[#212734] w-[500px] " /> */}
       {/* <OrangeBtn btnTitle="Ask a quetion"/> */}
       {/* <LocationDropDown className="bg-[#212734] w-[300px]" /> */}
