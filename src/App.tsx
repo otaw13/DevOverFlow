@@ -19,17 +19,15 @@
 // import Theme from "./atoms/Theme";
 // import Sidebar from "./molecules/Sidebar";
 import HomePage from "./pages/HomePage/HomePage";
-import Pfp from "./assets/svg/Profile-Pic-S.svg"
+import Pfp from "./assets/svg/Profile-Pic-S.svg";
+import Answers from "./molecules/Answers";
+import QuestionsAndAns from "./pages/QuestionsPage/QuestionsAndAns";
 
 export default function App() {
-
-
-
-
   return (
-    <div>
-      <HomePage imgSource={Pfp} 
-      />
+    <div className="bg-black">
+      {/* <HomePage imgSource={Pfp} /> */}
+      <QuestionsAndAns imgSource={Pfp}/>
       {/* <SearchbarComponent className="bg-[#212734] w-[500px] " /> */}
       {/* <OrangeBtn btnTitle="Ask a quetion"/> */}
       {/* <LocationDropDown className="bg-[#212734] w-[300px]" /> */}
@@ -90,6 +88,13 @@ export default function App() {
           questions="23493"
         />
         <Theme className="bg-[#151821] text-[#7B8EC8]" /> */}
+        {/* <Answers
+          title="I think what you want to do is probably not to attach the foreach function to only the one array you have here, but to make it work for all arrays. 
+To do that, you must edit the Array prototype (something that some people have very strong opinions about, because you can not protect against potential future namespace collisions - but other people find extremely useful). "
+          subtitle="*N.B. to avoid conflict with existing forEach functions (https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/forEach) I have named the function myForEach which I expect to be safe from conflict."
+          date="   answered Aug 6, 2022 at 21:01"
+          nickName="Philip Martin"
+        /> */}
       </div>
     </div>
   );

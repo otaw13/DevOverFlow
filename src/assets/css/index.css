@@ -57,6 +57,13 @@
   }
 }
 @layer base {
+  .dislike:hover {
+    filter: invert(50%) sepia(85%) saturate(1656%) hue-rotate(323deg) brightness(109%) contrast(103%);
+  }
+.like:hover {
+  filter: invert(100%) sepia(23%) saturate(4560%) hue-rotate(45deg) brightness(97%) contrast(100%);
+}
+  
   .orangeGradient {
     background: linear-gradient(93.22deg, #ff7000 -13.95%, #e2995f 99.54%);
   
