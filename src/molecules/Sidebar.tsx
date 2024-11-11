@@ -71,28 +71,28 @@ export default function Sidebar(props: Props) {
       <div className="mt-10">
         <h2 className="text-[20px] font-bold">Popular Tags</h2>
         <div className="flex  flex-col gap-y-5 mt-5 ">
-          <div className="w-full flex  gap-28 items-center  borde">
-            <Tag TagTitle="JavaScript" className="bg-[#151821]" />
+          <div className="w-full flex  gap-28 items-center  ">
+            <Tag TagTitle="JavaScript" className="bg-[#151821] group hover:bg-[#212734]" />
             <p className="ml-auto font-medium">+{props.QuestionsNum}</p>
           </div>
           <div className="w-full flex  gap-28 items-center">
-            <Tag TagTitle="Next.js" className="bg-[#151821]" />
+            <Tag TagTitle="Next.js" className="bg-[#151821] group hover:bg-[#212734]" />
             <p className="ml-auto font-medium">+{props.QuestionsNum}</p>
           </div>
           <div className="w-full flex  gap-28 items-center">
-            <Tag TagTitle="React.js" className="bg-[#151821]" />
+            <Tag TagTitle="React.js" className="bg-[#151821] group hover:bg-[#212734]" />
             <p className="ml-auto font-medium">+{props.QuestionsNum}</p>
           </div>
           <div className="w-full flex  gap-28 items-center">
-            <Tag TagTitle="Node.js" className="bg-[#151821]" />
+            <Tag TagTitle="Node.js" className="bg-[#151821] group hover:bg-[#212734]" />
             <p className="ml-auto font-medium">+{props.QuestionsNum}</p>
           </div>
           <div className="w-full flex  gap-28 items-center">
-            <Tag TagTitle="Python" className="bg-[#151821]" />
+            <Tag TagTitle="Python" className="bg-[#151821] group hover:bg-[#212734]" />
             <p className="ml-auto font-medium">+{props.QuestionsNum}</p>
           </div>
           <div className="w-full flex  gap-28 items-center">
-            <Tag TagTitle="MC Azure" className="bg-[#151821]" />
+            <Tag TagTitle="MC Azure" className="bg-[#151821] group hover:bg-[#212734]" />
             <p className="ml-auto font-medium">+{props.QuestionsNum}</p>
           </div>
         </div>

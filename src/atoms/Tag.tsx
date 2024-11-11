@@ -6,14 +6,14 @@ type Props = {
 };
 
 export default function Tag(props: Props) {
-
-
-
   return (
-    <button id="tag"
-      className={cn("text-[#7B8EC8] text-[12px]  rounded-[8px] px-5 py-2 font-medium ", props.className)}
+    <button
+      id="tag"
+      className={cn("  rounded-[8px] px-5 py-2  ", props.className)}
     >
-      {props.TagTitle}
+      <span className="group-hover:gradientText text-[#7B8EC8] font-medium text-[12px]">
+        {props.TagTitle}
+      </span>
     </button>
   );
 }

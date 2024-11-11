@@ -22,10 +22,10 @@ export default function Cards(props: Props) {
         <p className="text-[20px] font-semibold text-white">{props.title}</p>
       </div>
       <div className="flex gap-3 mt-5">
-        <Tag TagTitle="JavaScript" className="bg-[#212734]" />
-        <Tag TagTitle="REACT-JS" className="bg-[#212734]" />
-        <Tag TagTitle="C++" className="bg-[#212734]" />
-        <Tag TagTitle="Java" className="bg-[#212734]" />
+        <Tag TagTitle="JavaScript" className="hover:bg-[#212734] bg-[#151821] group" />
+        <Tag TagTitle="REACT-JS" className="hover:bg-[#212734] bg-[#151821] group" />
+        <Tag TagTitle="C++" className="hover:bg-[#212734] bg-[#151821] group" />
+        <Tag TagTitle="Java" className="hover:bg-[#212734] bg-[#151821] group" />
       </div>
       <div className="mt-5 flex items-center gap-3">
         <div className="text-white flex items-center justify-between w-1/2">

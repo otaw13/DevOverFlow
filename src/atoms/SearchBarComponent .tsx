@@ -15,7 +15,7 @@ export default function SearchbarComponent(props: Props) {
         className="placeholder:text-[#7B8EC8] p-3 outline-none rounded-[10px] bg-transparent w-full"
         type="text"
         placeholder={props.placeholed}
-        onClick={props.toggle} 
+        onClick={props.toggle}
       />
     </div>
   );
