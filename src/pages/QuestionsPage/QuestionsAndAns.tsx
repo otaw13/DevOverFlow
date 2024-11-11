@@ -3,18 +3,18 @@ import { cn } from "@/lib/utils";
 import MenuComponent from "@/molecules/MenuComponent";
 import Sidebar from "@/molecules/Sidebar";
 import MooN from "@/assets/svg/Dark.svg";
-import OrangeBtn from "@/atoms/OrangeBtn";
-import Cards from "@/molecules/Cards";
-import imagePath from "@/assets/svg/avatar.svg";
 import SearchDropDown from "@/molecules/SearchDropDown";
 import Theme from "@/atoms/Theme";
-import Tag from "@/atoms/Tag";
 import SearchbarComponent from "@/atoms/SearchBarComponent ";
 import Answers from "@/molecules/Answers";
-import Avatar from "@/assets/svg/avatar.svg";
+
+import Question from "@/atoms/Question";
 
 type Props = {
   imgSource: string;
+  views?: string;
+  answers?: string;
+  votes?: string;
 };
 
 export default function HomePage(props: Props) {
@@ -41,8 +41,6 @@ export default function HomePage(props: Props) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isThemeOpen]);
-
-  const DATA = ["Item1", "Item2", "Item3", "Item4"];
 
   return (
     <div className="bg-black">
@@ -81,20 +79,20 @@ export default function HomePage(props: Props) {
           )}
 
           <div className="flex flex-col mx-auto container gap-y-6 pt-32">
-            <Cards
-            className="mx-auto"
-              title={
-                "How to refresh all the data inside the Datatable and move the data into original place after closing the modal popup close button"
-              }
-              usersName={"Shateesh"}
-              onlineTime={"Asked 2 days ago"}
-              imageSrc={Avatar}
-            />
+            <Question />
             <Answers
               title="I think what you want to do is probably not to attach the foreach function to only the one array you have here, but to make it work for all arrays. 
-To do that, you must edit the Array prototype (something that some people have very strong opinions about, because you can not protect against potential future namespace collisions - but other people find extremely useful). "
+              To do that, you must edit the Array prototype (something that some people have very strong opinions about, because you can not protect against potential future namespace collisions - but other people find extremely useful). "
               subtitle="*N.B. to avoid conflict with existing forEach functions (https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/forEach) I have named the function myForEach which I expect to be safe from conflict."
-              date="   answered Aug 6, 2022 at 21:01"
+              date=" answered Aug 6, 2022 at 21:01"
+              nickName="Philip Martin"
+            />
+            <hr className="border-top border-[#3F4354] mx-auto border-[0.5px] w-[700px]" />
+            <Answers
+              title="I think what you want to do is probably not to attach the foreach function to only the one array you have here, but to make it work for all arrays. 
+              To do that, you must edit the Array prototype (something that some people have very strong opinions about, because you can not protect against potential future namespace collisions - but other people find extremely useful). "
+              subtitle=""
+              date=" answered Aug 6, 2022 at 21:01"
               nickName="Philip Martin"
             />
           </div>
