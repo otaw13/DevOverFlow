@@ -22,12 +22,14 @@ import HomePage from "./pages/HomePage/HomePage";
 import Pfp from "./assets/svg/Profile-Pic-S.svg";
 import Answers from "./molecules/Answers";
 import QuestionsAndAns from "./pages/QuestionsPage/QuestionsAndAns";
+import YourAnswerPage from "./pages/YourAnswer/YourAnswerPage";
 
 export default function App() {
   return (
     <div className="bg-black">
       {/* <HomePage imgSource={Pfp} /> */}
-      <QuestionsAndAns imgSource={Pfp}/>
+      {/* <QuestionsAndAns imgSource={Pfp}/> */}
+      <YourAnswerPage imgSource={Pfp}/>
       {/* <SearchbarComponent className="bg-[#212734] w-[500px] " /> */}
       {/* <OrangeBtn btnTitle="Ask a quetion"/> */}
       {/* <LocationDropDown className="bg-[#212734] w-[300px]" /> */}

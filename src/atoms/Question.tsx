@@ -8,7 +8,6 @@ import Tag from "./Tag";
 import FilterComponent from "./FilterComponent";
 
 export default function Question() {
-  const DATA = ["item1", "item2", "item3", " item4"];
   return (
     <div className="mx-auto">
       <div className="pb-5">

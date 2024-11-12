@@ -66,22 +66,6 @@
       brightness(97%) contrast(100%);
   }
 
-  .orangeGradient {
-    background: linear-gradient(93.22deg, #ff7000 -13.95%, #e2995f 99.54%);
-  }
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  .gradientText:hover {
-    background-size: 100% 100%;
-    background: linear-gradient(93.22deg, #ff7000 -13.95%, #e2995f 99.54%);
-    background-clip: text;
-    color: rgba(0, 0, 0, 0);
-  }
-
   .gradientText {
     background-size: 100% 100%;
     background: linear-gradient(
@@ -93,5 +77,19 @@
 
     background-clip: text;
     color: rgba(0, 0, 0, 0);
+  }
+  .orangeGradient {
+    background: linear-gradient(93.22deg, #ff7000 -13.95%, #e2995f 99.54%);
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .gradientText:hover {
+    background: linear-gradient(93.22deg, #ff7000 -13.95%, #e2995f 99.54%);
+    background-clip: text;
+    color: transparent;
   }
 }

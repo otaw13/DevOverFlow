@@ -18,7 +18,7 @@ type Props = {
   votes?: string;
 };
 
-export default function HomePage(props: Props) {
+export default function YourAnswerPage(props: Props) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isThemeOpen, setIsThemeOpen] = useState(false);
 
@@ -89,15 +89,8 @@ export default function HomePage(props: Props) {
               nickName="Philip Martin"
             />
             <hr className="border-top border-[#3F4354] mx-auto border-[0.5px] w-[700px]" />
-            <Answers
-              title="I think what you want to do is probably not to attach the foreach function to only the one array you have here, but to make it work for all arrays. 
-              To do that, you must edit the Array prototype (something that some people have very strong opinions about, because you can not protect against potential future namespace collisions - but other people find extremely useful). "
-              subtitle=""
-              date=" answered Aug 6, 2022 at 21:01"
-              nickName="Philip Martin"
-            />
+            <Textarea className="bottom-[150px]" />
           </div>
-    
         </section>
       </div>
 
