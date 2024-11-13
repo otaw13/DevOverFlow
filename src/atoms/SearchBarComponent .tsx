@@ -3,8 +3,8 @@ import { cn } from "../lib/utils";
 
 type Props = {
   className?: string;
-  placeholed: string;
-  toggle: () => void;
+  placeholder: string;
+  toggle?: () => void;
 };
 
 export default function SearchbarComponent(props: Props) {
@@ -14,7 +14,7 @@ export default function SearchbarComponent(props: Props) {
       <input
         className="placeholder:text-[#7B8EC8] p-3 outline-none rounded-[10px] bg-transparent w-full"
         type="text"
-        placeholder={props.placeholed}
+        placeholder={props.placeholder}
         onClick={props.toggle}
       />
     </div>

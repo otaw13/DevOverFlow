@@ -28,7 +28,7 @@ export default function MenuComponent(props: Props) {
           <nav className="flex flex-col gap-2 ml-1 text-white mt-12 ">
             <a
               className="flex gap-3 text-[18px] py-3 px-4 rounded-[8px] font-semibold hover:bg-gradient-to-r from-[#FF7000] to-[#E2995F]"
-              href="App/HomePage"
+              href="#"
             >
               <img src={Home} alt="home" /> Home
             </a>

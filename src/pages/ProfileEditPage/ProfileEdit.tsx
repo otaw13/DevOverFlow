@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import MenuComponent from "@/molecules/MenuComponent";
-import Sidebar from "@/molecules/Sidebar";
 import MooN from "@/assets/svg/Dark.svg";
 import SearchDropDown from "@/molecules/SearchDropDown";
 import Theme from "@/atoms/Theme";
@@ -48,15 +47,7 @@ export default function YourAnswerPage(props: Props) {
       <div className={`${isSearchOpen ? "opacity-90" : "opacity-1"}`}>
         <section className={cn("bg-black w-full h-full relative")}>
           <MenuComponent className="bg-[#0F1117] w-[250px]" />
-          <Sidebar
-            className="bg-[#07080b] w-[300px] text-white mt-[88px]"
-            reftitle1="Would it be appropriate to point out an error in another paper during a referee report?"
-            reftitle2="How can an airconditioning machine exist?"
-            reftitle3="Interrogated every time crossing UK Border as citizen"
-            reftitle4="Low digit addition generator"
-            reftitle5="What is an example of 3 numbers that do not make up a vector?"
-            QuestionsNum={20000}
-          />
+         
 
           <header className="flex fixed top-0 w-full z-[2] p-5 bg-[#07080b]">
             <SearchbarComponent
@@ -79,17 +70,14 @@ export default function YourAnswerPage(props: Props) {
             </div>
           )}
 
-          <div className="flex flex-col mx-auto container gap-y-6 pt-32">
-            <Question />
-            <Answers
-              title="I think what you want to do is probably not to attach the foreach function to only the one array you have here, but to make it work for all arrays. 
-              To do that, you must edit the Array prototype (something that some people have very strong opinions about, because you can not protect against potential future namespace collisions - but other people find extremely useful). "
-              subtitle="*N.B. to avoid conflict with existing forEach functions (https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/forEach) I have named the function myForEach which I expect to be safe from conflict."
-              date=" answered Aug 6, 2022 at 21:01"
-              nickName="Philip Martin"
-            />
-            <hr className="border-top border-[#3F4354] mx-auto border-[0.5px] w-[700px]" />
-            <Textarea className="bottom-[150px]" />
+          <div className="flex flex-col mx-auto text-white container  w-[700px] gap-y-6 pt-32 pb-1">
+            <h1 className="text-[30px] font-bold text-white ">Edit Profile</h1>
+            <div className="my-4"><p className="py-2 font-semibold">Full Name</p><input type="text" className="rounded-[6px] text-white w-[700px]  outline-none px-6 py-4 bg-[#151821]" /></div>
+            <div className="my-5"><p className="py-2 font-semibold">User Name</p><input type="text" className="rounded-[6px] text-white w-[700px] outline-none px-6 py-4 bg-[#151821]" /></div>
+            <div className="my-5"><p className="py-2 font-semibold">Portfolio Link</p><input type="text" className="rounded-[6px] text-blue-600  w-[700px] outline-none px-6 py-4 bg-[#151821]" /></div>
+            <div className="my-5"><p className="py-2 font-semibold">Location</p><input type="text" className="rounded-[6px] text-white w-[700px] outline-none px-6 py-4 bg-[#151821]" /></div>
+            <div className="my-4"><p className="py-2 font-semibold">Bio</p><textarea  className="rounded-[6px] text-white w-[700px] outline-none h-[120px] p-5 resize-none bg-[#151821]" /></div>
+            <button className="font-semibold text-white flex ml-auto orangeGradient rounded-[8px] px-10 py-3">Submit</button>
           </div>
         </section>
       </div>

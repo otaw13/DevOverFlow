@@ -60,7 +60,7 @@ export default function HomePage(props: Props) {
           <header className="flex fixed top-0 w-full z-[2] p-5 bg-[#07080b]">
             <SearchbarComponent
               className="bg-[#0c0e13] w-[500px] mx-auto text-white"
-              placeholed="Search anything globally"
+              placeholder="Search anything globally"
               toggle={toggleSearch}
             />
             <button onClick={toggleTheme}>
@@ -87,7 +87,7 @@ export default function HomePage(props: Props) {
             </div>
 
             <SearchbarComponent
-              placeholed="Search for Questions Here..."
+              placeholder="Search for Questions Here..."
               className="bg-[#0c0e13] w-[780px] mx-auto text-white"
               toggle={() => {}}
             />
