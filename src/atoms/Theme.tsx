@@ -12,7 +12,7 @@ export default function Theme(props: Props) {
   return (
     <div
       className={cn(
-        "flex flex-col fixed top-[80px] right-[40px]  z-50 items-center rounded-[4px] w-[180px] h-auto gap-2",
+        "flex flex-col fixed top-[70px] right-[80px]  z-50 items-center rounded-[10px] border border-[#212734] w-[180px] h-auto gap-2",
         props.className
       )}
     >
@@ -22,7 +22,7 @@ export default function Theme(props: Props) {
           <p className="font-semibold text-[20px]">Light</p>
         </div>
       </div>
-      <div  className="w-full p-3 hover:bg-[#212734] rounded-[4px]">
+      <div className="w-full p-3 hover:bg-[#212734] rounded-[4px]">
         <div className="flex items-center gap-3 w-full hover:[filter:invert(52%)_sepia(25%)_saturate(6807%)_hue-rotate(1deg)_brightness(101%)_contrast(109%)]">
           <img src={Dark} alt="moon" className="w-6 h-6" />
           <p className="font-semibold text-[20px]">Dark</p>

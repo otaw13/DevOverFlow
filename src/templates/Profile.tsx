@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import MenuComponent from "@/molecules/MenuComponent";
-import Sidebar from "@/molecules/Sidebar";
 import MooN from "@/assets/svg/Dark.svg";
 import SearchDropDown from "@/molecules/SearchDropDown";
 import Theme from "@/atoms/Theme";
 import SearchbarComponent from "@/atoms/SearchBarComponent ";
-import Answers from "@/molecules/Answers";
-
-import Question from "@/atoms/Question";
-import Textarea from "@/atoms/Textarea";
+import ProfileComponent from "@/molecules/ProfileComponent";
+import pfp from "@/assets/svg/Ellipse 4.png";
 
 type Props = {
   imgSource: string;
@@ -48,17 +45,9 @@ export default function HomePage(props: Props) {
       <div className={`${isSearchOpen ? "opacity-90" : "opacity-1"}`}>
         <section className={cn("bg-black w-full h-full relative")}>
           <MenuComponent className="bg-[#0F1117] w-[250px]" />
-          <Sidebar
-            className="bg-[#07080b] w-[300px] text-white mt-[88px]"
-            reftitle1="Would it be appropriate to point out an error in another paper during a referee report?"
-            reftitle2="How can an airconditioning machine exist?"
-            reftitle3="Interrogated every time crossing UK Border as citizen"
-            reftitle4="Low digit addition generator"
-            reftitle5="What is an example of 3 numbers that do not make up a vector?"
-            QuestionsNum={20000}
-          />
 
           <header className="flex fixed top-0 w-full z-[2] p-5 bg-[#07080b]">
+            <SearchDropDown open={isSearchOpen} toggle={toggleSearch} />
             <SearchbarComponent
               className="bg-[#0c0e13] w-[500px] mx-auto text-white"
               placeholder="Search anything globally"
@@ -80,28 +69,28 @@ export default function HomePage(props: Props) {
           )}
 
           <div className="flex flex-col mx-auto container gap-y-6 pt-32">
-            <Question />
-            <Answers
-              title="I think what you want to do is probably not to attach the foreach function to only the one array you have here, but to make it work for all arrays. 
-              To do that, you must edit the Array prototype (something that some people have very strong opinions about, because you can not protect against potential future namespace collisions - but other people find extremely useful). "
-              subtitle="*N.B. to avoid conflict with existing forEach functions (https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/forEach) I have named the function myForEach which I expect to be safe from conflict."
-              date=" answered Aug 6, 2022 at 21:01"
-              nickName="Philip Martin"
-            />
-            <hr className="border-top border-[#3F4354] mx-auto border-[0.5px] w-[700px]" />
-            <Answers
-              title="I think what you want to do is probably not to attach the foreach function to only the one array you have here, but to make it work for all arrays. 
-              To do that, you must edit the Array prototype (something that some people have very strong opinions about, because you can not protect against potential future namespace collisions - but other people find extremely useful). "
-              subtitle=""
-              date=" answered Aug 6, 2022 at 21:01"
-              nickName="Philip Martin"
-            />
+            <div>
+              <ProfileComponent
+                userPfp={pfp}
+                userName={"Faizan JSM"}
+                userID={"faizan"}
+                userLink={"jsmastery.pro"}
+                userLocation={"Mumbai, India"}
+                userRegDate={"May 2023"}
+                userBio={
+                  "Launch your development career with project-based coaching - showcase your skills with practical development experience and land the coding career of your dreams. Check out jsmastery.pro"
+                }
+                userQuestions={"156"}
+                userAnswers={"101"}
+                userGold={"15"}
+                userSilver={"23"}
+                userBronze={"38"}
+                QuestionsNum={"20152"}
+              />
+            </div>
           </div>
-    
         </section>
       </div>
-
-      <SearchDropDown open={isSearchOpen} toggle={toggleSearch} />
     </div>
   );
 }
