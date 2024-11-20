@@ -9,10 +9,10 @@ type Props ={
 
 export default function FilterComponent(props:Props) {
     return (
-        <div className={cn("rounded-[5px] px-2 py-3 flex justify-around items-center",props.className)}>
+        <button className={cn("rounded-[5px] px-2 py-3 flex justify-around items-center",props.className)}>
             <img src={FilterIcon} alt="filter icon" />
             <p className="text-[14px]  font-semibold">{props.filterTitle}</p>
             <img src={DorpDownIcon} alt="arrow down" />
-        </div>
+        </button>
     )
 }

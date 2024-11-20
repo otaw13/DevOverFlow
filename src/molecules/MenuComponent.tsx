@@ -17,11 +17,11 @@ export default function MenuComponent(props: Props) {
     <aside>
       <div
         className={cn(
-          "h-[100vh] flex flex-col items-center fixed z-[10] top-0 left-0 overflow-x-hidden",
+          "h-[100vh] flex flex-col items-center w-full max-w-[250px] sidebarblur text-nowrap overflow-hidden",
           props.className
         )}
       >
-        <div className="pl-4 pr-8 pt-10">
+        <div className="mx-auto pt-10">
           <img src={Biglogo} alt="logo" />
         </div>
         <div className="flex flex-col flex-grow items-center w-full">

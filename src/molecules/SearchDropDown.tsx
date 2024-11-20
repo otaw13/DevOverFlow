@@ -14,16 +14,16 @@ const SearchDropDown = forwardRef<HTMLDivElement, Props>(
         ref={ref}
         className={`${
           open
-            ? "flex flex-col fixed opacity-1 left-[410px] z-10 top-[80px] bg-[#212734] w-[500px] h-[380px] rounded-[10px]"
+            ? "flex flex-col fixed opacity-1 left-[545px] z-10 top-[80px] bg-[#212734] w-[500px] h-[380px] rounded-[10px]"
             : "hidden"
         }`}
       >
-        <div className="flex justify-start items-center text-white gap-3 text-nowrap p-4">
+        <div className="flex items-center text-white gap-3 text-nowrap p-4">
           <p className="text-[18px] font-semibold ">Type :</p>
           {["Question", "Answer", "Users", "Tags"].map((type) => (
             <button
               key={type}
-              className="rounded-[40px] px-6 hover:orangeGradient  py-2 bg-[#151821] hover:orangeGradient"
+              className="rounded-[40px] px-6 hover:orangeGradient py-2 bg-[#151821] "
             >
               {type}
             </button>

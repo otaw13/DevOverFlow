@@ -9,12 +9,7 @@ import Bronze from "@/assets/svg/Bronze Medal.svg";
 import Cards from "./Cards";
 import imagePath from "@/assets/svg/avatar.svg";
 import Tag from "@/atoms/Tag";
-import js from "@/assets/svg/js.svg"
-import ts from "@/assets/svg/ts.svg"
-import three from "@/assets/svg/three.svg"
-import tw from "@/assets/svg/tailwind.svg"
-import react from "@/assets/svg/react.svg"
-import git from  "@/assets/svg/git.svg"
+
 
 type Props = {
   className?: string;
@@ -35,11 +30,11 @@ type Props = {
 
 const DATA = ["Item1", "Item2", "Item3"];
 
-export default function Profile(props: Props) {
+export default function ProfileComponent(props: Props) {
   return (
     <div
       className={cn(
-        "max-w-[1050px] relative ml-[250px] text-white",
+        "p-10 relative  text-white",
         props.className
       )}
     >
@@ -121,7 +116,7 @@ export default function Profile(props: Props) {
           />
         ))}
       </div>
-      <div className="mt-10 w-[300px] absolute top-[365px] right-[0px]">
+      <div className="mt-10 w-[300px] absolute top-[405px] right-[20px]">
         <h2 className="text-[20px] font-semibold">Top Tags</h2>
         <div className="flex  flex-col gap-y-5 mt-8 ">
           <div className="w-full flex  gap-28 items-center  ">

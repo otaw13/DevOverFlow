@@ -16,7 +16,7 @@ export default function Sidebar(props: Props) {
   return (
     <aside
       className={cn(
-        "h-[100vh] px-7 pt-3 flex flex-col items-center fixed z-[1] top-0 right-[0px] overflow-x-hidden",
+        "h-[100vh] px-7 pt-3 flex flex-col items-center w-full max-w-[300px] overflow-hidden",
         props.className
       )}
     >
@@ -87,14 +87,8 @@ export default function Sidebar(props: Props) {
             <Tag TagTitle="Node.js" className="bg-[#151821] group hover:bg-[#212734]" />
             <p className="ml-auto font-medium">+{props.QuestionsNum}</p>
           </div>
-          <div className="w-full flex  gap-28 items-center">
-            <Tag TagTitle="Python" className="bg-[#151821] group hover:bg-[#212734]" />
-            <p className="ml-auto font-medium">+{props.QuestionsNum}</p>
-          </div>
-          <div className="w-full flex  gap-28 items-center">
-            <Tag TagTitle="MC Azure" className="bg-[#151821] group hover:bg-[#212734]" />
-            <p className="ml-auto font-medium">+{props.QuestionsNum}</p>
-          </div>
+          
+          
         </div>
       </div>
     </aside>

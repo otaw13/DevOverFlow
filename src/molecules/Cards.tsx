@@ -17,7 +17,7 @@ type Props = {
 
 export default function Cards(props: Props) {
   return (
-    <div className={cn("rounded-[10px] w-[700px] p-8", props.className)}>
+    <div className={cn("rounded-[10px] w-full max-w-[700px] p-8", props.className)}>
       <div>
         <p className="text-[20px] font-semibold text-white">{props.title}</p>
       </div>
@@ -27,8 +27,8 @@ export default function Cards(props: Props) {
         <Tag TagTitle="C++" className="hover:bg-[#212734] bg-[#151821] group" />
         <Tag TagTitle="Java" className="hover:bg-[#212734] bg-[#151821] group" />
       </div>
-      <div className="mt-5 flex items-center gap-3">
-        <div className="text-white flex items-center justify-between w-1/2">
+      <div className="mt-5 flex items-center justify-between gap-3">
+        <div className="text-white flex items-center justify-between ">
           <div className="flex items-center gap-3">
             <a className="flex items-center gap-3" href="#">
               <img

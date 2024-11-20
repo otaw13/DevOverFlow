@@ -57,6 +57,23 @@
   }
 }
 @layer base {
+  .sidebarblur{
+    backdrop-filter:blur(1px)
+  }
+   
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #0f1117;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
   .dislike:hover {
     filter: invert(50%) sepia(85%) saturate(1656%) hue-rotate(323deg)
       brightness(109%) contrast(103%);

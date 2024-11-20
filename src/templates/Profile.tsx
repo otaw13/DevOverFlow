@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react";
-import { cn } from "@/lib/utils";
 import MenuComponent from "@/molecules/MenuComponent";
-import MooN from "@/assets/svg/Dark.svg";
-import SearchDropDown from "@/molecules/SearchDropDown";
-import Theme from "@/atoms/Theme";
-import SearchbarComponent from "@/atoms/SearchBarComponent ";
-import ProfileComponent from "@/molecules/ProfileComponent";
-import pfp from "@/assets/svg/Ellipse 4.png";
+import Header from "@/atoms/Header";
+import HeroProfileSec from "@/molecules/HeroProfileSec";
+import Pfp from "@/assets/svg/Profile-Pic-S.svg";
 
 type Props = {
   imgSource: string;
@@ -15,7 +11,7 @@ type Props = {
   votes?: string;
 };
 
-export default function HomePage(props: Props) {
+export default function Profile(props: Props) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isThemeOpen, setIsThemeOpen] = useState(false);
 
@@ -41,55 +37,25 @@ export default function HomePage(props: Props) {
   }, [isThemeOpen]);
 
   return (
-    <div className="bg-black">
-      <div className={`${isSearchOpen ? "opacity-90" : "opacity-1"}`}>
-        <section className={cn("bg-black w-full h-full relative")}>
-          <MenuComponent className="bg-[#0F1117] w-[250px]" />
+    <div
+      className={`${
+        isSearchOpen ? "opacity-90" : "opacity-100"
+      } h-screen w-screen  overflow-hidden`}
+    >
+      <div className="flex h-full w-full bg-black">
+        <div className="h-full w-full max-w-[250px] bg-[#0F1117]">
+          <MenuComponent />
+        </div>
 
-          <header className="flex fixed top-0 w-full z-[2] p-5 bg-[#07080b]">
-            <SearchDropDown open={isSearchOpen} toggle={toggleSearch} />
-            <SearchbarComponent
-              className="bg-[#0c0e13] w-[500px] mx-auto text-white"
-              placeholder="Search anything globally"
-              toggle={toggleSearch}
-            />
-            <button onClick={toggleTheme}>
-              <img className="px-5" src={MooN} alt="dark-mode" />
-            </button>
-            <img src={props.imgSource} alt="pfp" />
-          </header>
+        <div className="flex flex-1 flex-col h-full">
+          <Header imgSource={Pfp} />
 
-          {isThemeOpen && (
-            <div className="theme-dropdown absolute top-16 right-0 z-10">
-              <Theme
-                className="bg-[#151821] text-[#7B8EC8]"
-                open={isThemeOpen}
-              />
-            </div>
-          )}
-
-          <div className="flex flex-col mx-auto container gap-y-6 pt-32">
-            <div>
-              <ProfileComponent
-                userPfp={pfp}
-                userName={"Faizan JSM"}
-                userID={"faizan"}
-                userLink={"jsmastery.pro"}
-                userLocation={"Mumbai, India"}
-                userRegDate={"May 2023"}
-                userBio={
-                  "Launch your development career with project-based coaching - showcase your skills with practical development experience and land the coding career of your dreams. Check out jsmastery.pro"
-                }
-                userQuestions={"156"}
-                userAnswers={"101"}
-                userGold={"15"}
-                userSilver={"23"}
-                userBronze={"38"}
-                QuestionsNum={"20152"}
-              />
+          <div className="flex flex-1">
+            <div className="flex-1 p-4 ">
+              <HeroProfileSec />
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );

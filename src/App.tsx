@@ -31,7 +31,7 @@ export default function App() {
       {/* <HomePage imgSource={Pfp} /> */}
       {/* <QuestionsAndAns imgSource={Pfp}/> */}
       {/* <YourAnswerPage imgSource={Pfp}/> */}
-      <ProfileEdit imgSource={Pfp}/>
+      <ProfileEdit imgSource={Pfp} />
       {/* <SearchbarComponent className="bg-[#212734] w-[500px] " /> */}
       {/* <OrangeBtn btnTitle="Ask a quetion"/> */}
       {/* <LocationDropDown className="bg-[#212734] w-[300px]" /> */}
