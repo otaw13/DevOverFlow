@@ -38,7 +38,7 @@ useEffect(() => {
 
     return (
       <div>
-        <header className="flex  w-full max-w-[1400px] p-5 bg-[#07080b]">
+        <header className="flex  w-full max-w-[100vw] p-5 bg-[#07080b]">
           <SearchbarComponent
             className="bg-[#0c0e13] max-w-[500px] w-full mx-auto text-white"
             placeholder="Search anything globally"

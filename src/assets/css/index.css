@@ -29,6 +29,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -57,10 +58,15 @@
   }
 }
 @layer base {
-  .sidebarblur{
-    backdrop-filter:blur(1px)
+  .sidebarblur {
+    backdrop-filter: blur(1px);
   }
-   
+
+  .quill {
+    background-color:#151821 !important ;
+    ;
+  }
+
   ::-webkit-scrollbar-track {
     background: transparent;
   }
